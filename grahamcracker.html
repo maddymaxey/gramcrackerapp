@@ -1,0 +1,121 @@
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+  <title>GramCracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+  {{> App}}
+
+</body>
+
+<template name="App">
+  {{#unless username}}
+    {{#unless rounds}}
+      {{> login}}
+    {{/unless}}
+  {{/unless}}
+  {{#unless rounds}}
+   {{#if enoughPlayers}}
+    {{> start}}
+   {{else}}
+     {{> waiting}}
+   {{/if}}
+  {{/unless}}
+  {{#if judge}}
+	  {{> judgeBoard}}
+  {{/if}}
+  {{#if player}}
+	  {{#if search}}
+		  {{> search}}
+	  {{else}}
+		  {{> playerBoard}}
+    {{/if}}
+	{{/if}}
+  {{> scoreboard}}
+</template>
+
+<template name="judgeBoard">
+  <div>{{prompts}}</div>
+  <div>the number submissions remaining is {{remains}}</div>
+  <div class="submissions">
+    {{#each submissions}}
+      <div class="image">
+        <img data-user="{{this.username}}" src="{{this.url}}"><br>
+        <span>#{{this.hashtag}}</span>
+      </div>
+    {{/each}}
+  </div>
+</template>
+
+<template name="image">
+  <img src="{{url}}"/>
+</template>
+
+<template name="login">
+  
+  <div id="login">
+    <div id="logincontent">
+
+    <h1>Login</h1>
+    <input id="submitUsername" type="text" placeholder="Choose a username"/><br>
+    <button class="button">Submit</button>
+  </div>
+</div>
+</template>
+
+<template name="waiting">
+  <span>Waiting for more players...</span>
+</template>
+
+<template name="start">
+  <button  class="button">Start new game</button>
+</template>
+
+<template name="playerBoard">
+  <h2>{{prompts}}</h2>
+  <h3>Current judge: <em>{{judger}}</em></h3>
+  <span>Waiting on <em>{{remains}}</em> submissions</span> 
+  <div class="submissions">
+    {{#each submissions}}
+      <div class="image">
+        <img src={{this.url}}><br>
+        <span>#{{this.hashtag}}</span>
+      </div>
+    {{/each}}
+  </div>
+  <div class="hashtags">
+    {{#unless chosen}}
+      {{#each hashterg}}
+        <button data-hashtag="{{this}}" class="button">#{{this}}</button><br>
+      {{/each}}
+    {{/unless}}
+  </div>
+</template>
+
+<template name="search">
+  <h2>{{prompts}}</h2>
+  <h3>{{hasher}}}</h3>
+  <div class="search-images">
+    {{#each getImages}}
+      <div class="image">
+        <img src="{{this}}">
+      </div>
+    {{/each}}
+  </div>
+</template>
+
+<template name="scoreboard">
+  <div class="scoreboard">
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="player">
+  <div class="player">
+    <h3>{{username}} - {{score}}</h3>
+  </div>
+</template>

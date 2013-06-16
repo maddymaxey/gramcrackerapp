@@ -1,0 +1,257 @@
+
+
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/*Text*/
+
+body
+{font-family: 'Pathway Gothic One', sans-serif;}
+
+h1  {
+    font-size: 30px ; text-align:left; 
+    margin-left: 10px;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+h2 {font-size:0px;}
+
+p { 
+     color:black;
+     margin-left: 10px;
+     text-align: left;
+     font-size: 16px;
+     font-family: 'Pathway Gothic One', sans-serif;
+ 
+}
+
+#mobilegrams {width:0px;}
+
+li{color:black;
+     margin-left: 10px;
+     text-align: left;
+     font-size: 16px;
+     font-family: 'Pathway Gothic One', sans-serif;}
+
+
+.button {
+    -moz-box-shadow:inset 0px -1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px -1px 0px 0px #ffffff;
+    box-shadow:inset 0px -1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+    background-color:#ededed;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#000000;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size:22px;
+    padding:3px 76px;
+    text-decoration:none;
+    text-shadow:0px -2px 0px #ffffff;
+}.button:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+    background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+    background-color:#dfdfdf;
+}.button:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+#login{
+
+    height:600px;
+    width:100%;
+    background: url("mobile.jpg") no-repeat center center fixed ;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+
+
+}
+
+#logincontent{
+    margin:20px auto 100px;
+    position:fixed;
+}
+
+body{
+    background: url("footer.jpg") no-repeat center center fixed ;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+}
+
+
+/* lines*/
+hr{
+    width:100px; 
+    color:gray; 
+    margin: 0px 20px; 
+    text-indent:20px;
+}
+
+
+
+/* header*/
+
+
+
+#row3
+{
+margin-top:60px;
+width:20%;
+    height:600px;
+background-image:url("../images/footer.jpg");
+float:right;}
+
+#link
+{float:right;
+color:black;
+margin:0px;}
+
+
+/* body */
+
+/*body{ 
+     width:100%; 
+     height:400px; 
+     background-repeat:repeat;
+}*/
+
+
+
+/* user.html page */
+
+
+/* search.html page */
+/*
+ #signin
+ {font-size: 20px; float:right; margin:0px; font-color:black;}
+*/
+
+#bodycontent{
+
+    margin:300px auto;
+    width:950px; 
+    height:400px;}
+
+
+#mainimage{
+    margin:20px 150px 0px 50px; 
+    width:380px; 
+    float:right;
+}
+
+#signup
+{width:300px; float:right; margin:100px 100px;}
+#signinpage
+{width:300px; height: 600px; float:left; margin:100px 100px;}
+
+#navigation
+{  width:600px; 
+    float:right; 
+    height: 20px; 
+    margin:17px auto 0px auto; 
+    background-color-color: none;}
+
+#textcontainer
+{width:300px; float:left; margin:150px 20px;}
+
+#containermain
+{width:700px; margin:100px auto 0px; height:165px;}
+
+/*Index.Html Page*/
+
+#getstarted {
+    width:200px; 
+    float:left;
+}
+
+
+#container{ 
+    background-color:white;
+    width: 100%; 
+    height:0px;
+    position:fixed;
+    box-shadow: 0px 1px 50px #5E5E5E;
+}
+
+#app{
+    margin: 30px auto;
+}
+#mobilegetstarted {
+    width:0px;
+}
+  
+#submitUsername
+{width:200px;
+height:40px;}
+#navcontainer{ 
+    width: 100%; 
+    height:50px; 
+    float:left; 
+    margin:0px;
+} 
+
+#link{
+    color:black;
+     font-weight: 
+     bold; text-decoration: 
+     none; float:right; 
+     margin:20px 10px;
+}
+
+#logo{
+    width:100px; 
+    float:left;
+}
+
+/*
+#mobilebk{
+                background-image: url("images/mobile.jpg");
+                width:0px;
+                
+            }*/
+/*footer*/
+
+#footer { 
+    background-image: url("../images/footer.jpg");    
+    margin: 0px auto 0px auto;
+    width:100%;
+    height:600px;   /* Height of the footer */
+  } 
+
+
+
+  /* media Queries */
+
+
+
+ 
+}
